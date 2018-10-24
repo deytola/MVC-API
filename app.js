@@ -11,6 +11,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // app.use('/api/v1/products', products);
 // app.use('/api/v1/sales', sales);
 
+api.get('/', (req, res) => {
+  res.send({
+    message: "This is the home route";
+  });
+});
+
 //import routes into the application
 // import {myApp} from './server/routes';
 require('./server/routes')(app);
